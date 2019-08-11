@@ -3,6 +3,9 @@ libvirt
 
 Install and configure libvirt on Fedora.
 
+This role allows users to run virtual machines in userspace. It also
+configures [Kernel same-page Merging (KSM)][ksm].
+
 Requirements
 ------------
 
@@ -36,3 +39,6 @@ License
 -------
 
 [MIT](LICENSE)
+
+
+[ksm]: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_tuning_and_optimization_guide/chap-ksm

@@ -1,0 +1,29 @@
+# Configuration file for ksmtuned.
+# How long ksmtuned should sleep between tuning adjustments
+KSM_MONITOR_INTERVAL={{ ksm_monitor_interval }}
+
+# Millisecond sleep between ksm scans for 16Gb server.
+# Smaller servers sleep more, bigger sleep less.
+KSM_SLEEP_MSEC={{ ksm_sleep_msec }}
+
+# KSM_NPAGES_BOOST - is added to the `npages` value, when `free memory` is less than `thres`.
+KSM_NPAGES_BOOST={{ ksm_npages_boost }}
+
+# KSM_NPAGES_DECAY - is the value given is subtracted to the `npages` value, when `free memory` is greater than `thres`.
+KSM_NPAGES_DECAY={{ ksm_npages_decay }}
+
+# KSM_NPAGES_MIN - is the lower limit for the `npages` value.
+KSM_NPAGES_MIN={{ ksm_npages_min }}
+
+# KSM_NPAGES_MAX - is the upper limit for the `npages` value.
+KSM_NPAGES_MAX={{ ksm_npages_max }}
+
+# KSM_THRES_COEF - is the RAM percentage to be calculated in parameter `thres`.
+KSM_THRES_COEF={{ ksm_thres_coef }}
+
+# KSM_THRES_CONST - If this is a low memory system, and the `thres` value is less than `KSM_THRES_CONST`, then reset `thres` value to `KSM_THRES_CONST` value.
+KSM_THRES_CONST={{ ksm_thres_const }}
+
+# uncomment the following to enable ksmtuned debug information
+# LOGFILE=/var/log/ksmtuned
+# DEBUG=1

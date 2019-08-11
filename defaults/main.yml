@@ -1,4 +1,13 @@
 ---
-libvirt_pool_name: default
+ksm_max_kernel_pages: 0
+ksm_monitor_interval: 60
+ksm_npages_boost: 300
+ksm_npages_decay: -50
+ksm_npages_min: 64
+ksm_npages_max: 1250
+ksm_sleep_msec: 10
+ksm_thres_coef: 20
+ksm_thres_const: 2048
 libvirt_pool_dir: "{{ ansible_user_dir }}/VirtualMachines"
+libvirt_pool_name: default
 ...

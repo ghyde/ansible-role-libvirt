@@ -17,15 +17,15 @@
     notify:
     - restart libvirtd
   - name: copy KSM config file
-    copy:
-      src: sysconfig_ksm
+    template:
+      src: sysconfig_ksm.j2
       dest: /etc/sysconfig/ksm
       backup: yes
     notify:
     - restart ksm
   - name: copy ksmtuned config file
-    copy:
-      src: ksmtuned.conf
+    template:
+      src: ksmtuned.conf.j2
       dest: /etc/ksmtuned.conf
       backup: yes
     notify:

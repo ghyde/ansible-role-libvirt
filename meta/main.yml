@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: libvirt
+  author: Garrett Hyde
+  description: Install and configure libvirt on Fedora
+  issue_tracker_url: https://github.com/ghyde/ansible-role-libvirt/issues
+  license: MIT
+  min_ansible_version: 2.5
+  platforms:
+  - name: Fedora
+    versions:
+    - 28
+    - 29
+    - 30
+  galaxy_tags:
+  - fedora
+  - hypervisor
+  - libvirt
+  - virtualization

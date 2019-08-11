@@ -1,0 +1,4 @@
+---
+libvirt_pool_name: default
+libvirt_pool_dir: "{{ ansible_user_dir }}/VirtualMachines"
+...

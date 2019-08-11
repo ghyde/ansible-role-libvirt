@@ -1,0 +1,14 @@
+---
+- name: restart libvirtd
+  systemd:
+    name: libvirtd
+    state: restarted
+- name: restart ksm
+  systemd:
+    name: ksm
+    state: restarted
+- name: restart ksmtuned
+  systemd:
+    name: ksmtuned
+    state: restarted
+...

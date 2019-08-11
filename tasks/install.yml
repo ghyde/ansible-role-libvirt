@@ -1,0 +1,44 @@
+---
+# Install and configure libvirt
+- block:
+  - name: install packages
+    dnf:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - libvirt
+    - libvirt-python
+    - ksm
+    - python-lxml
+  - name: allow user libvirt management permissions
+    template:
+      src: libvirt.pkla.j2
+      dest: /etc/polkit-1/localauthority/50-local.d/libvirt.pkla
+    notify:
+    - restart libvirtd
+  - name: copy KSM config file
+    copy:
+      src: sysconfig_ksm
+      dest: /etc/sysconfig/ksm
+      backup: yes
+    notify:
+    - restart ksm
+  - name: copy ksmtuned config file
+    copy:
+      src: ksmtuned.conf
+      dest: /etc/ksmtuned.conf
+      backup: yes
+    notify:
+    - restart ksmtuned
+  - name: start packages
+    service:
+      name: "{{ item }}"
+      state: started
+      enabled: yes
+    loop:
+    - ksm
+    - ksmtuned
+    - libvirtd
+  become: yes
+  become_user: root
+...

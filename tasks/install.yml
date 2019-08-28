@@ -3,13 +3,12 @@
 - block:
   - name: install packages
     dnf:
-      name: "{{ item }}"
+      name:
+        - libvirt
+        - libvirt-python
+        - ksm
+        - python-lxml
       state: present
-    loop:
-    - libvirt
-    - libvirt-python
-    - ksm
-    - python-lxml
   - name: allow user libvirt management permissions
     template:
       src: libvirt.pkla.j2

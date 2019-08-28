@@ -8,6 +8,7 @@
         - libvirt-python
         - ksm
         - python-lxml
+        - virt-manager
       state: present
   - name: allow user libvirt management permissions
     template:

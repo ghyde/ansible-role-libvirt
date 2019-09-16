@@ -5,9 +5,9 @@
     dnf:
       name:
         - libvirt
-        - libvirt-python
-        - ksm
-        - python-lxml
+        - ksmtuned
+        - python3-lxml
+        - python3-libvirt
         - virt-manager
       state: present
   - name: allow user libvirt management permissions

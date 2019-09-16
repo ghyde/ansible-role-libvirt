@@ -8,8 +8,6 @@ galaxy_info:
   platforms:
   - name: Fedora
     versions:
-    - 28
-    - 29
     - 30
   galaxy_tags:
   - fedora

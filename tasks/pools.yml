@@ -25,7 +25,7 @@
     virt_pool:
       name: '{{ libvirt_pool_name }}'
       state: present
-      xml: '{{ lookup("template", "libvirt/pool.xml.j2") }}'
+      xml: '{{ lookup("template", "pool.xml.j2") }}'
   - name: build storage pool
     virt_pool:
       command: build

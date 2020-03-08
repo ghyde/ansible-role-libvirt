@@ -31,7 +31,7 @@
     notify:
     - restart ksmtuned
   - name: start packages
-    service:
+    systemd:
       name: "{{ item }}"
       state: started
       enabled: yes
